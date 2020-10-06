@@ -5,10 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <link
+  href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap"
+  rel="stylesheet"
+/>
     <title>Signup Form</title>
   </head>
   <body>
+    <div class="wrapper">
+      <h1>Signup Form</h1>
+      <form id="form">
+        <div>
+          <label for = "fname">Full name: </label>
+          <input
+            type = "text"
+            class = "inputs"
+            name = "fname"
+            id = "fname"
+            required
+            autocomplete = "on"
+            />
+        </div>
+        <div>
+          <label for = "saddress">Street Address </label>
+          <input
+            class = "inputs"
+            name = "saddress"
+            id = "saddress"
+            required
+          />
+        </div>
+        <div>
+          <label for = "eaddress">Email address </label>
+          <input
+            class = "inputs"
+            name = "eaddress"
+            id = "eaddress"
+            required
+          />
+        </div>
+        <div>
+          <label name = "phone">Phone number </label>
+          <input
+            class = "inputs"
+            name = "phone"
+            id = "phone"
+            required
+          />
+        </div>
+        <div>
+          <label name = "pword">Password </label>
+          <input
+            type = "password"
+            class = "inputs"
+            name = "pword"
+            id = "pword"
+            
+            required
+          />
+        </div>
+        <div>
+          <label name = "confpword">Confirm Password</label>
+          <input
+            type = "password"
+            class = "inputs"
+            name = "confpword"
+            id = "confpword"
+            
+            required
+          />
+        </div>
+        <div class = termArea>
+          <input 
+          type = "checkbox" 
+          id = "termsbox" 
+          name = "terms" 
+          value = "agree"
+          required>
+          <label for = "terms">I agree to the <a href="#">terms of service</a></label>
+        </div>
+        <div id = "perror">
+          <span id = "perrorText"></span>
+        </div>
+        <footer>
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </footer>
+      </form>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

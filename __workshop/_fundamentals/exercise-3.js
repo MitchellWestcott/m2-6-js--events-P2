@@ -19,7 +19,21 @@ const people = [
 
 function fullName(peopleArr) {
   // return something
-}
+  //start with the exceptional case, move down from there
+  //hasOwnProperty target "middle"
+
+  let namesArr = peopleArr.map((person) => {
+    if (person.name.hasOwnProperty("middle")) {
+      return `${person.name.first} ${person.name.middle} ${person.name.last}`
+    } else {
+      return `${person.name.first} ${person.name.last}`
+    }
+  });
+return namesArr;
+};
+
+console.log(fullName(people));
+
 
 // 2. Do a console.log to verify your function.
 

@@ -21,7 +21,18 @@ const people = [
 
 function avgAge(peopleArr) {
   // return something
-}
+  
+  //const sum = times.reduce((a, b) => a + b, 0);
+  //const avg = (sum / times.length) || 0;
+  
+  //times.reduce((a,b) => (a+b)) / times.length;
+  let avg = peopleArr.reduce(function (a,b) {
+    return a + b.age;
+  }, 0);
+  return Math.round(avg / peopleArr.length);
+   //people.age.length;
+   //return avg;
+};
 
 // 2. Do a console.log to verify your function.
 
